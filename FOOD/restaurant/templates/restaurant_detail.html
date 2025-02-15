@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ restaurant.name }}</title>
+    <style>
+        body{
+            background-color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ restaurant.name }}</h1>
+    <p>{{ restaurant.address }}</p>
+    <p>Contact: {{ restaurant.contact }}</p>
+
+    <h2>Menu Lists :</h2>
+    <ul>
+        {% for food in food_items %}
+            <li>
+                <img src="{{ food.image.url }}" alt="{{ food.name }}" width="200">
+                <strong>{{ food.name }}</strong> - {{ food.price }}
+                <p>{{ food.description }}</p>
+            </li>
+        {% endfor %} 
+    </ul>   
+</body>
+</html>

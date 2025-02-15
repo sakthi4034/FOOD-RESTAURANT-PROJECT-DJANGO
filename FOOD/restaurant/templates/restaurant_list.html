@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurants</title>
+    <style>
+        body{
+            background-color:skyblue;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Available Restaurants</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li><a href="{% url 'restaurant_detail' restaurant.id %}">{{ restaurant.name }}</a></li> <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
